@@ -21,6 +21,7 @@ var currentCover;
 // Add your event listeners here 👇
 window.addEventListener('load', createRandomCover);
 showRandomCvrBtn.addEventListener('click', createRandomCover);
+makeYourCvrBtn.addEventListener('click', switchFormView);
 
 // Create your event handlers and other functions here 👇
 
