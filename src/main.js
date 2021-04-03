@@ -21,3 +21,24 @@ var currentCover;
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
+
+function createRandomCover() {
+  showRandomTitle();
+  showRandomTagline1();
+  showRandomTagline2();
+  showRandomPhoto();
+  currentCover = new Cover(cover, title, tagline1, tagline2);
+  console.log(currentCover);
+}
+function showRandomTitle() {
+  title.innerText = titles[getRandomIndex(titles)];
+}
+function showRandomTagline1() {
+  tagline1.innerText = descriptors[getRandomIndex(descriptors)];
+}
+function showRandomTagline2() {
+  tagline2.innerText = descriptors[getRandomIndex(descriptors)];
+}
+function showRandomPhoto() {
+  cover.src = covers[getRandomIndex(covers)];
+}
