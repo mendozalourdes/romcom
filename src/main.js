@@ -3,7 +3,7 @@ var title = document.querySelector('.cover-title');
 var tagline1 = document.querySelector('.tagline-1');
 var tagline2 = document.querySelector('.tagline-2');
 var cover = document.querySelector('.cover-image');
-
+var showRandomCvrBtn = document.querySelector('.random-cover-button');
 
 // We've provided a few variables below
 var savedCovers = [
@@ -13,6 +13,7 @@ var currentCover;
 
 // Add your event listeners here 👇
 window.addEventListener('load', createRandomCover);
+showRandomCvrBtn.addEventListener('click', createRandomCover);
 
 // Create your event handlers and other functions here 👇
 
