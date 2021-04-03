@@ -12,7 +12,7 @@ var savedCovers = [
 var currentCover;
 
 // Add your event listeners here 👇
-
+window.addEventListener('load', createRandomCover);
 
 // Create your event handlers and other functions here 👇
 
