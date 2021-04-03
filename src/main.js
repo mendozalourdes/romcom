@@ -83,3 +83,23 @@ function goHomeView() {
   homeBtn.classList.add('hidden');
   saveCoverBtn.classList.remove('hidden');
 }
+
+function pushNewCoverValues() {
+  covers.push(inputCover.value);
+  titles.push(inputTitle.value);
+  descriptors.push(input1Descriptor.value);
+  descriptors.push(input2Descriptor.value);
+}
+
+function createOwnBook() {
+  currentCover = new Cover(cover, title, tagline1, tagline2)
+  cover.src = inputCover.value
+  title.innerHTML = inputTitle.value
+  tagline1.innerHTML = input1Descriptor.value
+  tagline2.innerHTML = input2Descriptor.value
+  homeView.classList.remove('hidden');
+  formView.classList.add('hidden');
+  savedCoverView.classList.add('hidden');
+  goHomeView();
+  pushNewCoverValues();
+}
