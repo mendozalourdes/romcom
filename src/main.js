@@ -11,6 +11,7 @@ var homeBtn = document.querySelector('.home-button');
 var formView = document.querySelector('.form-view');
 var homeView = document.querySelector('.home-view');
 var savedCoverView = document.querySelector('.saved-view');
+var createNewBookBtn = document.querySelector('.create-new-book-button');
 
 // We've provided a few variables below
 var savedCovers = [
@@ -24,6 +25,7 @@ showRandomCvrBtn.addEventListener('click', createRandomCover);
 makeYourCvrBtn.addEventListener('click', switchFormView);
 viewSavedCoversBtn.addEventListener('click', viewSavedCovers);
 homeBtn.addEventListener('click', goHomeView);
+
 
 // Create your event handlers and other functions here 👇
 
