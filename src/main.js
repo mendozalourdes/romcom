@@ -59,3 +59,12 @@ function switchFormView() {
   homeBtn.classList.remove('hidden');
   saveCoverBtn.classList.add('hidden');
 }
+
+function viewSavedCovers() {
+  savedCoverView.classList.remove('hidden');
+  homeView.classList.add('hidden');
+  formView.classList.add('hidden');
+  showRandomCvrBtn.classList.add('hidden');
+  saveCoverBtn.classList.add('hidden');
+  homeBtn.classList.remove('hidden');
+}
