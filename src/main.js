@@ -4,6 +4,13 @@ var tagline1 = document.querySelector('.tagline-1');
 var tagline2 = document.querySelector('.tagline-2');
 var cover = document.querySelector('.cover-image');
 var showRandomCvrBtn = document.querySelector('.random-cover-button');
+var makeYourCvrBtn = document.querySelector('.make-new-button');
+var viewSavedCoversBtn = document.querySelector('.view-saved-button');
+var saveCoverBtn = document.querySelector('.save-cover-button');
+var homeBtn = document.querySelector('.home-button');
+var formView = document.querySelector('.form-view');
+var homeView = document.querySelector('.home-view');
+var savedCoverView = document.querySelector('.saved-view');
 
 // We've provided a few variables below
 var savedCovers = [
