@@ -13,6 +13,7 @@ var currentCover;
 
 // Add your event listeners here 👇
 window.addEventListener('load', createRandomCover);
+showRandomCvrBtn.addEventListener('click', createRandomCover);
 
 // Create your event handlers and other functions here 👇
 
