@@ -4,6 +4,13 @@ var tagline1 = document.querySelector('.tagline-1');
 var tagline2 = document.querySelector('.tagline-2');
 var cover = document.querySelector('.cover-image');
 var showRandomCvrBtn = document.querySelector('.random-cover-button');
+var makeYourCvrBtn = document.querySelector('.make-new-button');
+var viewSavedCoversBtn = document.querySelector('.view-saved-button');
+var saveCoverBtn = document.querySelector('.save-cover-button');
+var homeBtn = document.querySelector('.home-button');
+var formView = document.querySelector('.form-view');
+var homeView = document.querySelector('.home-view');
+var savedCoverView = document.querySelector('.saved-view');
 
 // We've provided a few variables below
 var savedCovers = [
@@ -14,6 +21,9 @@ var currentCover;
 // Add your event listeners here 👇
 window.addEventListener('load', createRandomCover);
 showRandomCvrBtn.addEventListener('click', createRandomCover);
+makeYourCvrBtn.addEventListener('click', switchFormView);
+viewSavedCoversBtn.addEventListener('click', viewSavedCovers);
+homeBtn.addEventListener('click', goHomeView);
 
 // Create your event handlers and other functions here 👇
 
@@ -42,4 +52,31 @@ function showRandomTagline2() {
 }
 function showRandomPhoto() {
   cover.src = covers[getRandomIndex(covers)];
+}
+
+function switchFormView() {
+  formView.classList.remove('hidden');
+  homeView.classList.add('hidden');
+  showRandomCvrBtn.classList.add('hidden');
+  homeBtn.classList.remove('hidden');
+  saveCoverBtn.classList.add('hidden');
+}
+
+function viewSavedCovers() {
+  savedCoverView.classList.remove('hidden');
+  homeView.classList.add('hidden');
+  formView.classList.add('hidden');
+  showRandomCvrBtn.classList.add('hidden');
+  saveCoverBtn.classList.add('hidden');
+  homeBtn.classList.remove('hidden');
+}
+
+function goHomeView() {
+  savedCoverView.classList.add('hidden');
+  homeView.classList.remove('hidden');
+  savedCoverView.classList.add('hidden');
+  showRandomCvrBtn.classList.remove('hidden');
+  formView.classList.add('hidden');
+  homeBtn.classList.add('hidden');
+  saveCoverBtn.classList.remove('hidden');
 }
