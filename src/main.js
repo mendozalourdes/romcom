@@ -50,3 +50,11 @@ function showRandomTagline2() {
 function showRandomPhoto() {
   cover.src = covers[getRandomIndex(covers)];
 }
+
+function switchFormView() {
+  formView.classList.remove('hidden');
+  homeView.classList.add('hidden');
+  showRandomCvrBtn.classList.add('hidden');
+  homeBtn.classList.remove('hidden');
+  saveCoverBtn.classList.add('hidden');
+}
