@@ -1,4 +1,8 @@
 // Create variables targetting the relevant DOM elements here 👇
+var title = document.querySelector('.cover-title');
+var tagline1 = document.querySelector('.tagline-1');
+var tagline2 = document.querySelector('.tagline-2');
+var cover = document.querySelector('.cover-image');
 
 
 // We've provided a few variables below
