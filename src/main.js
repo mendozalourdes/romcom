@@ -29,6 +29,7 @@ showRandomCvrBtn.addEventListener('click', createRandomCover);
 makeYourCvrBtn.addEventListener('click', switchFormView);
 viewSavedCoversBtn.addEventListener('click', viewSavedCovers);
 homeBtn.addEventListener('click', goHomeView);
+createNewBookBtn.addEventListener('click', preventEvent);
 createNewBookBtn.addEventListener('click', createOwnBook);
 
 // Create your event handlers and other functions here 👇
@@ -83,6 +84,10 @@ function goHomeView() {
   formView.classList.add('hidden');
   homeBtn.classList.add('hidden');
   saveCoverBtn.classList.remove('hidden');
+}
+
+function preventEvent(e) {
+  e.preventDefault();
 }
 
 function pushNewCoverValues() {
