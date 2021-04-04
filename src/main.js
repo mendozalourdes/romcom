@@ -79,6 +79,19 @@ function viewSavedCovers() {
   homeBtn.classList.remove('hidden');
 }
 
+function displaySavedCovers() {
+  if (savedCovers.includes(currentCover) === false) {
+  savedCovers.push(currentCover)
+
+      savedCoversSection.innerHTML +=
+      `<section class="mini-cover">
+        <img class="cover-image" src=${currentCover.cover.src}>
+        <h2 class="cover-title">${currentCover.title.innerText}</h2>
+        <h3 class="tagline">A tale of <span class="tagline-1">${currentCover.tagline1.innerText}</span> and <span class="tagline-2">${currentCover.tagline2.innerText}</span></h3>
+      </section>`
+    }
+}
+
 function goHomeView() {
   savedCoverView.classList.add('hidden');
   homeView.classList.remove('hidden');
