@@ -16,12 +16,13 @@ var inputCover = document.querySelector('#cover');
 var inputTitle = document.querySelector('#title');
 var input1Descriptor = document.querySelector('#descriptor1');
 var input2Descriptor = document.querySelector('#descriptor2');
+var savedCoversSection = document.querySelector('.saved-covers-section')
 
 // We've provided a few variables below
 var savedCovers = [
   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
 ];
-var currentCover = new Cover(cover, title, tagline1, tagline2);
+var currentCover;
 
 // Add your event listeners here 👇
 window.addEventListener('load', createRandomCover);
@@ -31,6 +32,8 @@ viewSavedCoversBtn.addEventListener('click', viewSavedCovers);
 homeBtn.addEventListener('click', goHomeView);
 createNewBookBtn.addEventListener('click', preventEvent);
 createNewBookBtn.addEventListener('click', createOwnBook);
+saveCoverBtn.addEventListener('click', displaySavedCovers);
+
 
 // Create your event handlers and other functions here 👇
 
@@ -65,6 +68,7 @@ function switchFormView() {
   showRandomCvrBtn.classList.add('hidden');
   homeBtn.classList.remove('hidden');
   saveCoverBtn.classList.add('hidden');
+  savedCoverView.classList.add('hidden');
 }
 
 function viewSavedCovers() {
@@ -74,6 +78,20 @@ function viewSavedCovers() {
   showRandomCvrBtn.classList.add('hidden');
   saveCoverBtn.classList.add('hidden');
   homeBtn.classList.remove('hidden');
+  displaySavedCovers();
+}
+
+function displaySavedCovers() {
+  if (savedCovers.includes(currentCover) === false) {
+  savedCovers.push(currentCover)
+
+      savedCoversSection.innerHTML +=
+      `<section class="mini-cover">
+        <img class="cover-image" src=${currentCover.cover.src}>
+        <h2 class="cover-title">${currentCover.title.innerText}</h2>
+        <h3 class="tagline">A tale of <span class="tagline-1">${currentCover.tagline1.innerText}</span> and <span class="tagline-2">${currentCover.tagline2.innerText}</span></h3>
+      </section>`
+    }
 }
 
 function goHomeView() {
@@ -98,7 +116,6 @@ function pushNewCoverValues() {
 }
 
 function createOwnBook() {
-  currentCover = new Cover(cover, title, tagline1, tagline2)
   cover.src = inputCover.value
   title.innerHTML = inputTitle.value
   tagline1.innerHTML = input1Descriptor.value
