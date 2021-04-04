@@ -32,6 +32,7 @@ viewSavedCoversBtn.addEventListener('click', viewSavedCovers);
 homeBtn.addEventListener('click', goHomeView);
 createNewBookBtn.addEventListener('click', preventEvent);
 createNewBookBtn.addEventListener('click', createOwnBook);
+saveCoverBtn.addEventListener('click', displaySavedCovers);
 
 
 // Create your event handlers and other functions here 👇
@@ -77,6 +78,7 @@ function viewSavedCovers() {
   showRandomCvrBtn.classList.add('hidden');
   saveCoverBtn.classList.add('hidden');
   homeBtn.classList.remove('hidden');
+  displaySavedCovers();
 }
 
 function displaySavedCovers() {
