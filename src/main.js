@@ -16,7 +16,7 @@ var inputCover = document.querySelector('#cover');
 var inputTitle = document.querySelector('#title');
 var input1Descriptor = document.querySelector('#descriptor1');
 var input2Descriptor = document.querySelector('#descriptor2');
-var savedCoversSection = document.querySelector('.saved-covers-section');
+var savedCoversSection = document.querySelector('.saved-covers-section')
 
 // We've provided a few variables below
 var savedCovers = [
@@ -68,7 +68,7 @@ function switchFormView() {
   showRandomCvrBtn.classList.add('hidden');
   homeBtn.classList.remove('hidden');
   saveCoverBtn.classList.add('hidden');
-  saveCoverView.classList.add('hidden');
+  savedCoverView.classList.add('hidden');
 }
 
 function viewSavedCovers() {
@@ -78,7 +78,7 @@ function viewSavedCovers() {
   showRandomCvrBtn.classList.add('hidden');
   saveCoverBtn.classList.add('hidden');
   homeBtn.classList.remove('hidden');
-  displaySavedCovers()
+  displaySavedCovers();
 }
 
 function displaySavedCovers() {
